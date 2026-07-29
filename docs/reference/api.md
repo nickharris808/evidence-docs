@@ -231,7 +231,26 @@ from honestbench import (merkle, registry, mutation, absence, bounds, sha256_fil
 | `describe(name: 'str', value: 'float', bound: 'dict | None') -> 'str'` | function | Format a statistic together with its bound; REFUSE to format one without. |
 | `UnboundedStatistic` | class | Raised when a statistic is reported with no bound. That is the whole point. |
 
-!!! note "Not installed when this page was generated"
+## `tokencount`
 
-    `tokencount`. Their sections are omitted rather than written from memory.
+[tokencount](https://github.com/nickharris808/tokencount)
 
+```python
+from tokencount import (bpe, verify, properties, encode, count, byte_length, load_merges, dump_merges, learn_merges, Verdict, check_claim, reconcile, run_all)
+```
+
+| name | kind | summary |
+|---|---|---|
+| `bpe` | value | tokencount.bpe — a byte-level BPE encoder with three checkable accounting properties. |
+| `verify` | value | tokencount.verify — refuse a claimed token count that arithmetic rules out. |
+| `properties` | value | tokencount.properties — the three accounting properties, as runnable checks. |
+| `encode(text: 'str', merges: 'Sequence[Pair]') -> 'list[bytes]'` | function | Encode ``text`` to a list of byte-symbols under a priority-ordered ``merges`` list. |
+| `count(text: 'str', merges: 'Sequence[Pair]' = ()) -> 'int'` | function | The token count. A pure function of its arguments — property 1. |
+| `byte_length(text: 'str') -> 'int'` | function | The utf-8 byte length: the ceiling from property 2. |
+| `load_merges(lines: 'Iterable[str]') -> 'list[Pair]'` | function | Parse a merge list in the ``<a> <b>`` per-line form, with percent-escaped symbols. |
+| `dump_merges(merges: 'Sequence[Pair]') -> 'str'` | function | Render a merge list to the on-disk form. ``load_merges(dump_merges(m)) == m`` always. |
+| `learn_merges(corpus: 'Sequence[str]', n_merges: 'int') -> 'list[Pair]'` | function | Learn a merge list from a corpus by the standard most-frequent-pair rule. |
+| `Verdict(ok: 'bool', question: 'str', claimed: 'int', byte_ceiling: 'int', computed: 'int | None' = None, reasons: 'list[str]' = <factory>) -> None` | class | Verdict(ok: 'bool', question: 'str', claimed: 'int', byte_ceiling: 'int', computed: 'int | None' = None, reasons: 'list[str]' = <f |
+| `check_claim(text: 'str', claimed: 'int', merges: 'Sequence[Pair] | None' = None, tolerance: 'int' = 0) -> 'Verdict'` | function | Check a claimed token count against the byte ceiling and, optionally, a merge list. |
+| `reconcile(text: 'str', claims: 'dict[str, int]', merges: 'Sequence[Pair] | None' = None) -> 'dict'` | function | Reconcile several parties' claims about one input. |
+| `run_all(trials: 'int' = 200, seed: 'int' = 20260729, merges: 'Sequence[Pair] | None' = None) -> 'dict'` | function | Run all three property checks. Seeded, so a failure is reproducible. |

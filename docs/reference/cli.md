@@ -218,6 +218,37 @@ options:
 ```
 
 
+## `formal-proof-mcp`
+
+[formal-proof-mcp](https://github.com/nickharris808/formal-proof-mcp)
+
+```console
+$ formal-proof-mcp --help
+formal_proof_mcp.server — a Model Context Protocol server over stdio, dependency-free.
+
+WHY NO SDK. An MCP server is a JSON-RPC 2.0 loop over stdin/stdout. Implementing it directly keeps
+this package installable with zero dependencies and keeps the whole transport auditable in one
+short file — which matters for a tool whose entire purpose is that an agent can trust its answers.
+
+WHAT AN AGENT GETS. Six tools, and one invariant that runs through all of them:
+
+    a result that was not checked is never returned as a result that passed.
+
+Every response carries `status` ∈ {ok, failed, unavailable}, and `unavailable` is kept distinct
+from both. An agent that reads "no Lean toolchain installed" as "no errors found" will assert a
+proof it never checked — so this server makes that specific confusion impossible to express.
+
+Run it:  `formal-proof-mcp`   (stdio; wire it into Claude Desktop or Cursor)
+Try it:  `formal-proof-mcp --selftest`
+
+  --selftest     prove each tool fires
+  --list-tools   the 10 tools this server exposes
+  --version
+
+  With no flags: serve MCP over stdio.
+```
+
+
 ## `gatecount`
 
 [gatecount](https://github.com/nickharris808/gatecount)
@@ -828,7 +859,90 @@ options:
 ```
 
 
+## `tokencount`
+
+[tokencount](https://github.com/nickharris808/tokencount)
+
+```console
+$ tokencount --help
+usage: tokencount [-h] [--version] {count,verify,learn,properties} ...
+
+a token count both parties can recompute (measure-only)
+
+positional arguments:
+  {count,verify,learn,properties}
+    count               compute the token count
+    verify              check a claimed count
+    learn               learn a merge list from a corpus
+    properties          run the three accounting property checks
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+```
+
+### `tokencount count`
+
+```console
+$ tokencount count --help
+usage: tokencount count [-h] [--merges MERGES] text
+
+positional arguments:
+  text             the text, or - for stdin
+
+options:
+  -h, --help       show this help message and exit
+  --merges MERGES
+```
+
+### `tokencount verify`
+
+```console
+$ tokencount verify --help
+usage: tokencount verify [-h] --claimed CLAIMED [--merges MERGES]
+                         [--tolerance TOLERANCE]
+                         text
+
+positional arguments:
+  text                  the text, or - for stdin
+
+options:
+  -h, --help            show this help message and exit
+  --claimed CLAIMED
+  --merges MERGES
+  --tolerance TOLERANCE
+```
+
+### `tokencount learn`
+
+```console
+$ tokencount learn --help
+usage: tokencount learn [-h] [--n N] [--out OUT] corpus
+
+positional arguments:
+  corpus
+
+options:
+  -h, --help  show this help message and exit
+  --n N
+  --out OUT
+```
+
+### `tokencount properties`
+
+```console
+$ tokencount properties --help
+usage: tokencount properties [-h] [--trials TRIALS] [--seed SEED] [--json]
+
+options:
+  -h, --help       show this help message and exit
+  --trials TRIALS
+  --seed SEED
+  --json
+```
+
+
 !!! warning "Not installed in the environment that built this page"
 
-    `certhead`, `formal-proof-mcp`, `kvleak`, `kvprobe`, `tokencount`. Their sections are ABSENT rather than described from memory — an invented help text is worse than a gap.
+    `certhead`, `kvleak`, `kvprobe`. Their sections are ABSENT rather than described from memory — an invented help text is worse than a gap.
 
