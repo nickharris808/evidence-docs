@@ -516,6 +516,92 @@ options:
 ```
 
 
+## `kvleak`
+
+[kvleak](https://github.com/nickharris808/kvleak)
+
+```console
+$ kvleak --help
+usage: kvleak [-h] [--version] {residency,plan,scan,selftest} ...
+
+does your serving stack leak between tenants? (measure-only)
+
+positional arguments:
+  {residency,plan,scan,selftest}
+    residency           can a null from this probe set even be interpreted?
+    plan                what probe set IS interpretable on this model and
+                        budget
+    scan                live cross-tenant probe (needs an endpoint)
+    selftest            positive controls for the tool itself
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+```
+
+### `kvleak residency`
+
+```console
+$ kvleak residency --help
+usage: kvleak residency [-h] [--model MODEL] [--config CONFIG] --kv-budget-gib
+                        KV_BUDGET_GIB [--prefixes PREFIXES] [--tokens TOKENS]
+                        [--safety-margin SAFETY_MARGIN] [--json]
+
+options:
+  -h, --help            show this help message and exit
+  --model MODEL         a known name, or a label for --config
+  --config CONFIG       path to a HuggingFace config.json
+  --kv-budget-gib KV_BUDGET_GIB
+                        GiB of KV cache the engine actually has (after
+                        weights)
+  --prefixes PREFIXES
+  --tokens TOKENS
+  --safety-margin SAFETY_MARGIN
+  --json
+```
+
+### `kvleak plan`
+
+```console
+$ kvleak plan --help
+usage: kvleak plan [-h] [--model MODEL] [--config CONFIG] --kv-budget-gib
+                   KV_BUDGET_GIB
+
+options:
+  -h, --help            show this help message and exit
+  --model MODEL         a known name, or a label for --config
+  --config CONFIG       path to a HuggingFace config.json
+  --kv-budget-gib KV_BUDGET_GIB
+                        GiB of KV cache the engine actually has (after
+                        weights)
+```
+
+### `kvleak scan`
+
+```console
+$ kvleak scan --help
+usage: kvleak scan [-h] [--engine {vllm,sglang}] [--base-url BASE_URL]
+                   [--include-unfixed]
+
+options:
+  -h, --help            show this help message and exit
+  --engine {vllm,sglang}
+  --base-url BASE_URL
+  --include-unfixed     enable probe 4, which automates an UNFIXED upstream
+                        defect
+```
+
+### `kvleak selftest`
+
+```console
+$ kvleak selftest --help
+usage: kvleak selftest [-h]
+
+options:
+  -h, --help  show this help message and exit
+```
+
+
 ## `preregister`
 
 [preregister](https://github.com/nickharris808/preregister)
@@ -944,5 +1030,5 @@ options:
 
 !!! warning "Not installed in the environment that built this page"
 
-    `certhead`, `kvleak`, `kvprobe`. Their sections are ABSENT rather than described from memory — an invented help text is worse than a gap.
+    `certhead`, `kvprobe`. Their sections are ABSENT rather than described from memory — an invented help text is worse than a gap.
 
