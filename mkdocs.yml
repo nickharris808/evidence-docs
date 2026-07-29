@@ -1,0 +1,60 @@
+site_name: A measurement you cannot check is a press release
+site_description: >
+  Twenty-five verification tools with one rule: report what is true, refuse what cannot be
+  checked, and never round "not checked" up to "fine".
+site_url: https://nickharris808.github.io/evidence-docs/
+repo_url: https://github.com/nickharris808/evidence-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle: {icon: material/brightness-7, name: Switch to dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle: {icon: material/brightness-4, name: Switch to light mode}
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight: {anchor_linenums: true}
+  - pymdownx.inlinehilite
+  - toc: {permalink: true}
+
+nav:
+  - Start here:
+      - index.md
+      - start/install.md
+      - start/tutorial.md
+  - Concepts:
+      - concepts/abstention.md
+      - concepts/verdicts.md
+      - concepts/what-this-proves.md
+      - concepts/measure-gate.md
+  - Reference:
+      - reference/tools.md
+      - reference/cli.md
+      - reference/api.md
+  - Guides:
+      - guides/troubleshooting.md
+      - guides/faq.md
+      - guides/architecture.md
+      - guides/contributing.md
+      - guides/citation.md

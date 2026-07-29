@@ -1,0 +1,10 @@
+Copyright (c) 2026 — AI-scale interconnect invention-discovery lab.
+
+Proprietary / all rights reserved for the lab-authored code and documents
+(simulators/netsim, experiments, formal, patent, reports, scripts, tests,
+workloads). Provided for evaluation / diligence; relicensable to MIT on
+transaction.
+
+Vendored external tools under simulators/external/ retain their own licenses
+(see reports/license_manifest.md). They are used as external binaries / source
+references only; no GPL code is incorporated into the lab-authored modules.
