@@ -91,7 +91,7 @@ not turn your build red, your build was never checking your evidence.
 ## Sixty seconds
 
 ```bash
-pip install "evidence[all]"
+pip install "git+https://github.com/nickharris808/evidence"
 evidence audit .
 ```
 

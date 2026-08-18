@@ -3,7 +3,9 @@
 
 # Every artifact
 
-25 published artifacts. Each links to its own repository, where the README carries the worked example and the honest-scope section for that tool.
+24 artifacts are described below. Each links to its own repository, where the README carries the worked example and the honest-scope section for that tool.
+
+27 artifacts are published in total; the 3 not described here are named in the warning at the foot of this page.
 
 
 ## Tools
@@ -47,15 +49,21 @@
 
 | artifact | what it answers |
 |---|---|
-| [`negative-results-atlas`](https://huggingface.co/spaces/nickh007/negative-results-atlas) | ten claims we took back |
 | [`tenant-leak-demo`](https://huggingface.co/spaces/nickh007/tenant-leak-demo) | the residency calculator |
 | [`wait-for-visualiser`](https://huggingface.co/spaces/nickh007/wait-for-visualiser) | paste a wait-for graph, see the cycle |
+
+!!! warning "Published but not described"
+
+    `certhead`, `docs-site`, `isolation-tax` are live but have no entry in the canonical table, so they are missing from every cross-link footer. That is a bug in the publishing metadata.
+
 
 ## Install everything
 
 ```bash
-pip install "evidence[all]"
+pip install evidence-runner
 ```
+
+The distribution is `evidence-runner`; the module you import is `evidence`. `pip install evidence` fetches an unrelated third party's project.
 
 Individual packages install from GitHub until the PyPI publisher is enabled:
 

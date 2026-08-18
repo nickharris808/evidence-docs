@@ -6,7 +6,7 @@ will get the same results, because nothing here is illustrative.
 You will need Python 3.9+ and about twenty minutes.
 
 ```bash
-pip install "evidence[all]"
+pip install "git+https://github.com/nickharris808/evidence"
 ```
 
 ---
