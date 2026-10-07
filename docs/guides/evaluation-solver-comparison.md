@@ -10,4 +10,6 @@ Before comparing capacitance outputs, review conductor ordering, reference poten
 
 Read the full [VerifyCore Labs article](https://verifycorelabs.com/blog/solver-comparison/) for the proposed method and its evidence limits. These notes do not expand what any tool in this documentation proves.
 
+[Public evidence and scope](https://verifycorelabs.com/theorems/independent-solver-anchors/)
+
 Attribution: VerifyCore Labs. AI assisted the preparation of this excerpt and its underlying article.

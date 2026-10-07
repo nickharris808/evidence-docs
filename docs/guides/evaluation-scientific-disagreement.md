@@ -10,4 +10,6 @@ A negative-findings row should preserve the attempted method, structure, conditi
 
 Read the full [VerifyCore Labs article](https://verifycorelabs.com/blog/scientific-disagreement/) for the proposed method and its evidence limits. These notes do not expand what any tool in this documentation proves.
 
+[Public evidence and scope](https://latticegraph.com/blog/four-calculations-said-unstable-literature-says-otherwise)
+
 Attribution: VerifyCore Labs. AI assisted the preparation of this excerpt and its underlying article.
