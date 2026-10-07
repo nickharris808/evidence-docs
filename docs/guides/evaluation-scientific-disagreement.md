@@ -12,4 +12,4 @@ Read the full [VerifyCore Labs article](https://verifycorelabs.com/blog/scientif
 
 [Public evidence and scope](https://latticegraph.com/blog/four-calculations-said-unstable-literature-says-otherwise)
 
-Attribution: VerifyCore Labs. AI assisted the preparation of this excerpt and its underlying article.
+Attribution: VerifyCore Labs.

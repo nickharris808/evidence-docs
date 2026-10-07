@@ -12,4 +12,4 @@ Read the full [VerifyCore Labs article](https://verifycorelabs.com/blog/solver-c
 
 [Public evidence and scope](https://verifycorelabs.com/theorems/independent-solver-anchors/)
 
-Attribution: VerifyCore Labs. AI assisted the preparation of this excerpt and its underlying article.
+Attribution: VerifyCore Labs.
