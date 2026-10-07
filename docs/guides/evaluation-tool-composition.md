@@ -12,4 +12,4 @@ Read the full [VerifyCore Labs article](https://verifycorelabs.com/blog/tool-com
 
 [Public evidence and scope](https://verifycorelabs.com/theorems/composition-certificates/)
 
-Attribution: VerifyCore Labs. AI assisted the preparation of this excerpt and its underlying article.
+Attribution: VerifyCore Labs.

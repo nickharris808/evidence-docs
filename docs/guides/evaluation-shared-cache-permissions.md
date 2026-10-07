@@ -12,4 +12,4 @@ Read the full [VerifyCore Labs article](https://verifycorelabs.com/blog/shared-c
 
 [Public evidence and scope](https://verifycorelabs.com/theorems/tn-bits/)
 
-Attribution: VerifyCore Labs. AI assisted the preparation of this excerpt and its underlying article.
+Attribution: VerifyCore Labs.
