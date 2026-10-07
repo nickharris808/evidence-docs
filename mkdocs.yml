@@ -58,3 +58,7 @@ nav:
       - guides/architecture.md
       - guides/contributing.md
       - guides/citation.md
+      - guides/evaluation-tool-composition.md
+      - guides/evaluation-shared-cache-permissions.md
+      - guides/evaluation-solver-comparison.md
+      - guides/evaluation-scientific-disagreement.md
